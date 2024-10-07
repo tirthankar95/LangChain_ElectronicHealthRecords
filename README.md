@@ -1,15 +1,9 @@
 ## To Do List:-
 
-`1. Generate data [Some tests(f0, f1, ... f2), patient name, Disease Stage]
+1. Vector Store management.
+https://python.langchain.com/v0.1/docs/modules/data_connection/vectorstores/
 
-2. Use LangChain Document Splitter & Vector DB
-    - Load
-    - Split
-    - Embed
-    - Store
+2. Create a model and add this tool to your bot. 
 
-3. Is prompts required ? Or can I directly query, see if it's able to retrieve past data and do some basic operations.
+3. See what Langchain agents do.`
 
-4. Create a model and add this tool to your bot. 
-
-5. See what Langchain agents do.`
