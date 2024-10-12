@@ -114,4 +114,12 @@ rag_chain = (
     | StopHallucinations
 )
 
-print(rag_chain.invoke("For patient name: P4 what is the average result on test f0?"))
+logging.info(rag_chain.invoke("For patient name: P4 what is the average result on test f0?"))
+
+from langchain.agents import AgentExecutor, create_tool_calling_agent
+
+
+# Logistic Regression.
+@tool 
+def predict_lr() -> int: 
+    pass 
