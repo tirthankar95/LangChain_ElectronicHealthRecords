@@ -1,0 +1,7 @@
+{
+    "LANGCHAIN_TRACING_V2": "true",
+    "LANGCHAIN_ENDPOINT": "https://api.smith.langchain.com",
+    "LANGCHAIN_API_KEY": "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",
+    "LANGCHAIN_PROJECT": "pr-yellowish-licorice-77",
+    "HUGGINGFACEHUB_API_TOKEN": "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"
+}

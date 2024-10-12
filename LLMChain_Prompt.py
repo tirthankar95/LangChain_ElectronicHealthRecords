@@ -3,14 +3,9 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain import HuggingFaceHub, LLMChain
 from langchain_core.output_parsers import StrOutputParser
 from langchain import hub
-import logging
-logging.basicConfig(
-    level=logging.DEBUG, 
-    format='%(asctime)s - %(filename)s - Line: %(lineno)d - %(message)s',  
-)
-import json
 from huggingface_hub import login
 import os
+import json
 
 examples = [
     {
