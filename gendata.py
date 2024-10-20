@@ -19,7 +19,7 @@ if __name__ == '__main__':
     wts = np.random.randn(n_tests, 1)
     std = 0.1
     y = mega_tests @ wts + std * np.random.randn(n_patients, 1)
-    df['disease_prob'] = sigmoid(y)
+    df['has_disease'] = sigmoid(y)
 ############ Test Set #############
     n_patients = 15 
     
@@ -31,4 +31,6 @@ if __name__ == '__main__':
     dft = pd.DataFrame(list(zip(patient_name, *zip(*mega_tests))), columns= ["name"] + test_name)
 ########### Save ###########
     df = pd.concat([df, dft])
-    df.to_csv('Disease.csv', index=False)
+    df.loc[df['has_disease'] >= 0.5, 'has_disease'] = 1.0
+    df.loc[df['has_disease'] < 0.5, 'has_disease'] = 0.0
+    df.to_csv('Disease_e432.csv', index=False)
