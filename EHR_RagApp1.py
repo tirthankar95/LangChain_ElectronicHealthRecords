@@ -1,4 +1,8 @@
 # https://python.langchain.com/docs/tutorials/rag/
+import warnings
+from sklearn.exceptions import InconsistentVersionWarning
+warnings.filterwarnings("ignore", category=InconsistentVersionWarning)
+warnings.filterwarnings("ignore", category=UserWarning)
 from langchain_community.document_loaders.csv_loader import CSVLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import numpy as np
@@ -143,6 +147,7 @@ def make_prediction_e432(sen):
         Xtest = total_model["scaler"].transform(df)
         Yp = total_model["model"].predict_proba(Xtest)
         return f'Probability of patient having the disease: {np.round(Yp[:, 1],5)}'
+    return sen 
 
 rag_chain = (
     QandA
